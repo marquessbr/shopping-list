@@ -4,6 +4,7 @@ import { map, tap } from 'rxjs/operators';
 
 import { Recipe } from '../recipes/recipe.model';
 import { RecipeService } from '../recipes/recipe.service';
+import { urlFirebaseDb } from './consts';
 
 @Injectable({ providedIn: 'root' })
 export class DataStorageService {
@@ -13,7 +14,7 @@ export class DataStorageService {
     const recipes = this.recipeService.getRecipes();
     this.http
       .put(
-        'https://ng-recipe-book-ef06c-default-rtdb.firebaseio.com//recipes.json',
+        `${urlFirebaseDb}/recipes.json`,
         recipes
       )
       .subscribe(response => {
@@ -24,7 +25,7 @@ export class DataStorageService {
   fetchRecipes() {
     return this.http
       .get<Recipe[]>(
-        'https://ng-recipe-book-ef06c-default-rtdb.firebaseio.com//recipes.json'
+        `${urlFirebaseDb}/recipes.json`,
       )
       .pipe(
         map(recipes => {
