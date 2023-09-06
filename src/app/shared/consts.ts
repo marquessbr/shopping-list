@@ -1,4 +1,4 @@
-export interface AuthResponseData {
+export interface IAuthResponseData {
     kind?: string           // Unknown param in my firebase version.
     idToken: string         // A Firebase Auth ID token for the newly created user.
     email: string           // The email for the newly created user.
@@ -6,6 +6,13 @@ export interface AuthResponseData {
     expiresIn: string       // The number of seconds in which the ID token expires.
     localId: string         // The uid of the newly created user.
     registered?: boolean    // Whether the email is for an existing account. 
+}
+
+export interface IUserData {
+    email: string;
+    id: string;
+    _token: string;
+    _tokenExpirationDate: string;
 }
 
 const KEY_API = 'AIzaSyCJviWQjUakStvTKl-3Yzvjn4ndEDvAwYA'
