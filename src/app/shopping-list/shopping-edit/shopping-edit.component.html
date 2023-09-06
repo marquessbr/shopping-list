@@ -36,8 +36,9 @@
             class="btn btn-danger"
             type="button"
             (click)="onDelete()"
-            *ngIf="editMode">Delete</button>
-          <button class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
+            *ngIf="editMode"
+            style="margin-left: 5px;">Delete</button>
+          <button class="btn btn-primary" type="button" (click)="onClear()" style="margin-left: 5px;">Clear</button>
         </div>
       </div>
     </form>
