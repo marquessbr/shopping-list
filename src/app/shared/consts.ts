@@ -1,3 +1,4 @@
+import { environment } from "src/environments/environment"
 export interface IAuthResponseData {
     kind?: string           // Unknown param in my firebase version.
     idToken: string         // A Firebase Auth ID token for the newly created user.
@@ -15,7 +16,7 @@ export interface IUserData {
     _tokenExpirationDate: string;
 }
 
-const KEY_API = 'AIzaSyCJviWQjUakStvTKl-3Yzvjn4ndEDvAwYA'
+const KEY_API = environment.firebaseAPIKey
 
 export const urlAuthSignUp = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${KEY_API}`
 export const urlFirebaseDb = 'https://ng-recipe-book-ef06c-default-rtdb.firebaseio.com'
