@@ -93,6 +93,7 @@ out
 .nuxt
 dist
 temp
+src.bkp
 
 # Gatsby files
 .cache/

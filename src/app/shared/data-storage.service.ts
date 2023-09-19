@@ -5,13 +5,12 @@ import { map, tap } from 'rxjs/operators';
 import { Recipe } from '../recipes/recipe.model';
 import { RecipeService } from '../recipes/recipe.service';
 import { urlFirebaseDb } from './consts';
-import { AuthService } from '../auth/auth.service';
 
 @Injectable({ providedIn: 'root' })
 export class DataStorageService {
   constructor(
     private http: HttpClient,
-    private recipeService: RecipeService) { }
+    private recipeService: RecipeService  ) { }
 
   storeRecipes() {
     const recipes = this.recipeService.getRecipes();
@@ -39,6 +38,7 @@ export class DataStorageService {
         }),
         tap(recipes => {
           this.recipeService.setRecipes(recipes);
-        }))
+        })
+      );
   }
 }

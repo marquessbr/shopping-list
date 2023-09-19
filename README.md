@@ -1,6 +1,6 @@
-# ShoppingList
+# Ngrx00StartingProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0-rc.1.
 
 ## Development server
 

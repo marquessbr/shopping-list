@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ShoppingList": {
+    "ngrx-00-starting-project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/shopping-list",
+            "outputPath": "dist/ngrx-00-starting-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -35,13 +35,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "outputHashing": "all"
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ShoppingList:build:production"
+              "browserTarget": "ngrx-00-starting-project:build:production"
             },
             "development": {
-              "browserTarget": "ShoppingList:build:development"
+              "browserTarget": "ngrx-00-starting-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ShoppingList:build"
+            "browserTarget": "ngrx-00-starting-project:build"
           }
         },
         "test": {
@@ -97,6 +97,6 @@
     }
   },
   "cli": {
-    "analytics": "d66868b4-a1f3-4db5-bccd-4ce20b99d5f6"
+    "analytics": "ca37e957-3a94-4bbc-8fd7-711d7c899b17"
   }
 }
